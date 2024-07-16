@@ -1,0 +1,196 @@
+{
+  "name": "top",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "user",
+        "files": [
+          {
+            "path": "src/at32f421_clock.c"
+          },
+          {
+            "path": "src/at32f421_int.c"
+          },
+          {
+            "path": "src/main.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "firmware",
+        "files": [
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_adc.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_cmp.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_crc.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_crm.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_debug.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_dma.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_ertc.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_exint.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_flash.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_gpio.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_i2c.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_misc.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_pwc.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_scfg.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_spi.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_tmr.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_usart.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_wdt.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/drivers/src/at32f421_wwdt.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "cmsis",
+        "files": [
+          {
+            "path": "AT32F421_Firmware_Library/libraries/cmsis/cm4/device_support/system_at32f421.c"
+          },
+          {
+            "path": "AT32F421_Firmware_Library/libraries/cmsis/cm4/device_support/startup/mdk/startup_at32f421.s"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "-AT32F421K8T7",
+  "packDir": ".pack/ArteryTek/AT32F421_DFP.2.1.6",
+  "miscInfo": {
+    "uid": "39fa7c5a5bfd8580bbaa33f5fb6214d2"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "none",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x4000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x08000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "at32f421xx",
+        "interface": "cmsis-dap-v1",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "pyOCD": {
+          "bin": "",
+          "targetName": "cortex_m",
+          "baseAddr": "0x08000000",
+          "speed": "4M",
+          "config": ".eide/debug.pyocd.yaml",
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "",
+          "interface": "stlink",
+          "baseAddr": "0x08000000"
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".",
+          "inc",
+          "AT32F421_Firmware_Library/libraries/drivers/inc",
+          "AT32F421_Firmware_Library/libraries/cmsis/cm4/device_support",
+          "AT32F421_Firmware_Library/libraries/cmsis/cm4/core_support"
+        ],
+        "libList": [],
+        "defineList": [
+          "AT32F421K8T7"
+        ]
+      }
+    }
+  },
+  "version": "3.4"
+}
